@@ -19,7 +19,11 @@ and then run
 
 	sudo nano /etc/gdm3/custom.conf
 
-here, you would need to uncomment the line “WaylandEnable=false”. To save the changes just use Ctrl + o, then enter and then Ctrl + z
+here, you would need to uncomment the line:
+
+	WaylandEnable=false
+
+To save the changes just use Ctrl + o, then enter and then Ctrl + z
 
 5.Run the RealVNC Server application and check that it opens correctly.
 
@@ -36,6 +40,7 @@ add at the bottom of the text the following lines:
 	hdmi_mode=82
 
 and comment the following line:
+
 	dtoverlay=vc4-kms-v3d
 
 7.Get the IP of the raspberry by running the ifconfig command on a terminal and copying the IPV6 that you get on the wlan0 connection.
