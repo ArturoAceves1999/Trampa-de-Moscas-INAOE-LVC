@@ -1,15 +1,5 @@
 
 
 
- Log of the date Wed 04 Dec 12:33:58 2024
-
- Camera error, please check integrity or release 
-
-
- Log of the date Wed 04 Dec 12:35:07 2024
-
- Camera error, please check integrity or release 
-
-
- Log of the date Wed 04 Dec 12:35:18 2024
-Image saved successfully on path 
+Log of the date Fri 06 Dec 14:11:07 2024
+Camera error, please check integrity or release 

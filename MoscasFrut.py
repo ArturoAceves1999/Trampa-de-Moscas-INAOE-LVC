@@ -2,13 +2,12 @@ import cv2
 import os
 import time
 import datetime
-import pyautogui
 
 print("Setting up the camera, path, and logs please wait...")
 
 captura = cv2.VideoCapture(0)
 path = '/run/user/1000/gvfs/google-drive:host=gmail.com,user=lvctfruta/GVfsSharedWithMe/1EKXB6EA8oBaYaB1ZqVub4xDf8eRS2SuV/1Af5moXu0KUXqpgD56vpq8mKAkoOGWBkJ/1dw-MbWP9yfLTxvIsw-GkQBZSCZcquKXW'
-newpath = os.getcwd() + '/Reporte diario/Trampa 1' #Used for logs and if the camera fails.
+newpath = os.path.dirname(os.path.abspath(__file__)) + '/Reporte diario/Trampa 1' #Used for logs and if the camera fails.
 
 
 #path = '/home/atrapamocas/Desktop'
@@ -34,11 +33,7 @@ while (captura.isOpened()):
       print(n)
       logfile.write(n)
       break
-   
-    
-  if cv2.waitKey(1) & 0xFF != 255:
-    cv2.imwrite(os.path.join(path, timeformat + '.jpg'), imagen)      
-    break
+
     # Check elapsed time in seconds
   elapsed_time = (cv2.getTickCount() - start_time) / cv2.getTickFrequency()
   if elapsed_time >= 5:  # 2 seconds
@@ -61,7 +56,7 @@ while (captura.isOpened()):
       break
 
 if captura.isOpened() is False:
-    n = "\n Camera error, please check integrity or release "
+    n = "\nCamera error, please check integrity or release "
     logfile.write(n)
     print(n)
     
