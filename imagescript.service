@@ -1,0 +1,12 @@
+[Unit]
+Description=Send an image of the camera once drive is mounted
+After=startdrive.service
+
+[Service]
+ExecStartPre=/bin/sleep 20
+ExecStart=/bin/bash /usr/local/bin/cameraexecute.sh
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus
+User=atrapamocas
+
+[Install]
+WantedBy=default.target

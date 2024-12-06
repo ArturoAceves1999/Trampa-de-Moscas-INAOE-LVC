@@ -1,0 +1,13 @@
+[Unit]
+Description=Starts Google Drive once we have internet connection
+After=network-online.target
+
+[Service]
+ExecStart=/bin/bash /usr/local/bin/startup.sh
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus
+User=atrapamocas
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=default.target
