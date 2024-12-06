@@ -49,7 +49,7 @@ For the first implementation, the hostname is
 
 	"atramacoscas-desktop"
 
-you can use it on RealVNC to access the machine, make sure that you use the correct Raspberry password.
+you can use it on RealVNC to access the machine, make sure that you use the correct Raspberry password *AND* that you are connected to the same network as the Raspberry.
 
 # Scripts:
 
